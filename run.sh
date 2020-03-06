@@ -1,38 +1,37 @@
 set -uex
 
-# Get the project number.
+# Assign a different project number
 PROJECT_ACC=$1
 
-# Directory to store fastq files.
-DATA=data
+# Directory to store fastq files
+RUN=reads
 
-# Directory to store fastqc files
-FASTQC=fastqc_out
+# Make fastqc output directory to store all fastqc files
+FASTQC=fastqc_output
 
-# Create fastqc_out directory
+# Make multiqc output directory
+MULTIQC=multiqc_output
+
+# Limit number of reads
+N=1000
+
+# Make fastqc directory
 mkdir -p $FASTQC
 
-# Directory to store multiqc output files
-MULTIQC=multiqc_out
-
-# Create multiqc output directory
+# Make multiqc directory to store multiqc files
 mkdir -p $MULTIQC
 
 # Get the number of runs and store metadata
 esearch -db sra -query $PROJECT_ACC | efetch -format runinfo > runinfo.csv
 
-
-# Get SRR ids from runinfo and store them in runids
+# Get SRR ids from runinfo.csv and store in runids.txt
 cat runinfo.csv | cut -f 1 -d ',' | grep SRR > runids.txt
 
+# Run first 10 of each SRR id and store in reads
+cat runids.txt | parallel fastq-dump -X $N {} -O $RUN
 
-# Run all SRR at once and only shows the first 10 single ends
-cat runids.txt | parallel fastq-dump -X 10 {} -O $DATA
+# Run fastqc of fastq in reads and store in fastqc_out
+fastqc $RUN/*.fastq -o $FASTQC
 
-
-# Run quality control on fastq files
-fastqc $DATA/*.fastq -o $FASTQC
-
-
-# Create a combined fastqc report of all runs
+# Run multiqc on fastqc and store in multiqc_out
 multiqc $FASTQC -o $MULTIQC
