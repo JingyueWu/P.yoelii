@@ -1,0 +1,73 @@
+# For single-ended data, one input and one output file are specified.
+
+# Paired-end mode requires 2 input files: forward and reverse reads,
+#                          4 output files: forward paired, forward unpaired, reverse paired, and reverse unpaired.
+
+# Among those 4 output files, the 2 for paired output are reads survived the processing,
+#                             the 2 for unpaired output were reads survived but the partner read did not. 
+
+# Multiple steps can be specified as required, by using additional arguments at the end.
+
+# Most steps take one or more settings, delimited by ':' (a colon)
+
+# Step options:
+
+# ILLUMINACLIP:<fastaWithAdaptersEtc>:<seed mismatches>:<palindrome clip threshold>:<simple clip threshold>
+#           fastaWithAdaptersEtc: specifies the path to a fasta file containing all the adapters, PCR sequences etc. The naming of the various sequences within this file determines how they are used. See below.
+#           seedMismatches: specifies the maximum mismatch count which will still allow a full match to be performed
+#           palindromeClipThreshold: specifies how accurate the match between the two 'adapter ligated' reads must be for PE palindrome read alignment.
+#           simpleClipThreshold: specifies how accurate the match between any adapter etc. sequence must be against a read.
+
+# SLIDINGWINDOW:<windowSize>:<requiredQuality>
+#           windowSize: specifies the number of bases to average across
+#           requiredQuality: specifies the average quality required.
+
+# LEADING:<quality>
+#           quality: Specifies the minimum quality required to keep a base.
+
+# TRAILING:<quality>
+#           quality: Specifies the minimum quality required to keep a base.
+
+# CROP:<length>
+#           length: The number of bases to keep, from the start of the read.
+
+# HEADCROP:<length>
+#           length: The number of bases to remove from the start of the read.
+
+# MINLEN:<length>
+#           length: Specifies the minimum length of reads to be kept.
+
+
+
+# This particular script works for single-ended data, and it uses illumina universal adapter.
+
+# Directory to store all fastq files
+mkdir Runs
+
+# Directory to store all fastqc files
+mkdir Fastqc
+
+# Directory to store multiqc files
+mkfir Multiqc
+
+# create a file stores all SRR ids and echo all SRR
+cat > ids.txt
+SRR2981461
+SRR2981460
+SRR2981459
+
+# Run first 100 of each SRR id and store in Runs
+cat ids.txt | parallel fastq-dump -X 100 {} -O Runs
+
+# Run fastqc of fastq in reads and store in Fastqc
+fastqc Runs/*.fastq -O Fastqc
+
+# Run multiqc on fastqc and store in Multiqc
+multiqc Fastqc -o Multiqc
+
+# Create an adapter format for Illumina instrument
+echo ">illumina" > adapter.fa
+echo "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC" >> adapter.fa
+
+# Trim adapters with trimmomatic
+trimmomatic SE SRR2981460.fastq output.fq ILLUMINACLIP:adapter.fa:2:30:5
