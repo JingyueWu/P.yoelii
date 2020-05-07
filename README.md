@@ -10,3 +10,5 @@ Plasmodium-specific accession numbers we are using here are mainly from Dr. Lind
 [P. falciparum gametocytes (Lasonder et al, NAR 2016)](https://www.ncbi.nlm.nih.gov/sra/SRX1470909%5baccn%5d)
 
 [P. yoelii gametocytes (Munoz et al, Molecular Microbiology 2017)](https://www.ncbi.nlm.nih.gov/sra/SRX1798482%5baccn%5d)
+
+In spring semester 2020, the analysis of data quality control is baing focused on and the script and report interpretation are demonstrated in this repository. 
