@@ -32,4 +32,4 @@ MultiQC is a modular tool to aggregate results from bioinformatics analyses acro
 
 12) Status Checks which is a diagram that shows status for each FastQC section showing whether results seem entirely normal (green), slightly abnormal (orange) or very unusual (red).
 
-In this MultiQC file, MultiQC reports regarding SRA experimental data are being listed along with my interpretation.
+In this MultiQC file, MultiQC reports regarding SRA experimental data of before and after the trimming of adapter are being listed along with my interpretation.
