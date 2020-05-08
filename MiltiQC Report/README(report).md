@@ -92,6 +92,9 @@ After trimming adapters, it seems “worse”, but I think since this graph just
 
 
 MultiQC results - (before trimming adapters)    
+![image](https://user-images.githubusercontent.com/61590108/81425966-85ee6780-9126-11ea-84cb-04f7b5b021b2.png)
+
+MultiQC results – (after trimming adapters) 
 
 
 
