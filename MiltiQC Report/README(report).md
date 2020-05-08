@@ -38,7 +38,13 @@ Conclusion: about the same, good quality
 MultiQC results - (before trimming adapters)
 ![image](https://user-images.githubusercontent.com/61590108/81425041-d95fb600-9124-11ea-8a19-6ecf67b97c71.png)
 
-MultiQC results – (after trimming adapters)   
+MultiQC results – (after trimming adapters)  
+![image](https://user-images.githubusercontent.com/61590108/81425112-f4322a80-9124-11ea-97b3-57957eae6bce.png)
+
+Conclusion: about the same, good quality
+
+
+MultiQC results - (before trimming adapters) 
 
 
 
