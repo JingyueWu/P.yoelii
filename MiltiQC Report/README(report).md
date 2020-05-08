@@ -54,7 +54,13 @@ MultiQC results - (before trimming adapters)
 MultiQC results – (after trimming adapters)   
 ![image](https://user-images.githubusercontent.com/61590108/81425354-6f93dc00-9125-11ea-8d84-59cb4cbc3756.png)
 
+![image](https://user-images.githubusercontent.com/61590108/81425401-8803f680-9125-11ea-9010-96c19c88f90b.png)
 
+Conclusion – 
+After trimming, this part of the report did seem to be a little “worse” – before trimming, 10 failed, 2 got warning; but after trimming, 11 failed and 1 got warning. Failure means the difference between A and T, or G and C is greater than 20% in any position. And warning means the difference between A and T, or G and C is greater than 10% in any position. One of the reasons that might cause this is the overrepresented sequence in the sample. These sequences may bias the overall composition. Later, in the report, I found that before trimming, there are only one overrepresented sequences that failed (SRR7059095), but after trimming, the number of overrepresented sequences failure went up to four (SRR7059095, SRR7059096, SRR7059100, SRR7059101)
+
+
+MultiQC results - (before trimming adapters)    
 
 
 
