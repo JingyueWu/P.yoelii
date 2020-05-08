@@ -26,7 +26,11 @@ MultiQC results – (after trimming adapters)
 Conclusion:  about the same
 
 
-MultiQC results - (before trimming adapters)    
+MultiQC results - (before trimming adapters)   
+![image](https://user-images.githubusercontent.com/61590108/81424849-930a5700-9124-11ea-8f05-6443820907de.png)
+
+MultiQC results – (after trimming adapters)   
+
 
 
 
