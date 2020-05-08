@@ -52,6 +52,9 @@ MultiQC results - (before trimming adapters)
 ![image](https://user-images.githubusercontent.com/61590108/81425296-525f0d80-9125-11ea-9d77-8083ddf6ac1d.png)
 
 MultiQC results – (after trimming adapters)   
+![image](https://user-images.githubusercontent.com/61590108/81425354-6f93dc00-9125-11ea-8d84-59cb4cbc3756.png)
+
+
 
 
 
