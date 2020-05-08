@@ -95,11 +95,13 @@ MultiQC results - (before trimming adapters)
 ![image](https://user-images.githubusercontent.com/61590108/81425966-85ee6780-9126-11ea-84cb-04f7b5b021b2.png)
 
 MultiQC results – (after trimming adapters) 
+![image](https://user-images.githubusercontent.com/61590108/81426043-a28a9f80-9126-11ea-940b-c2d1300cb67b.png)
+
+Conclusion – 
+Interestingly they are about the same, same as good which I though would have some flagged as warning because of biased sequence. 
 
 
-
-
-
+MultiQC results - (before trimming adapters)    
 
 
 
