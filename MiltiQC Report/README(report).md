@@ -102,7 +102,9 @@ Interestingly they are about the same, same as good which I though would have so
 
 
 MultiQC results - (before trimming adapters)    
+![image](https://user-images.githubusercontent.com/61590108/81426131-c51cb880-9126-11ea-9617-47e90dd0b1a3.png)
 
+MultiQC results – (after trimming adapters)   
 
 
 
