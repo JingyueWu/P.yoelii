@@ -45,6 +45,8 @@ Conclusion: about the same, good quality
 
 
 MultiQC results - (before trimming adapters) 
+![image](https://user-images.githubusercontent.com/61590108/81425194-19269d80-9125-11ea-9380-3d57e8b06964.png)
+
 
 
 
