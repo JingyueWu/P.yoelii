@@ -111,7 +111,16 @@ MultiQC results - (before trimming adapters)
 ![image](https://user-images.githubusercontent.com/61590108/81426328-08772700-9127-11ea-8f0e-1d38c63266f9.png)
 
 MultiQC results – (after trimming adapters)   
+![image](https://user-images.githubusercontent.com/61590108/81426504-47a57800-9127-11ea-91d5-e2a6c7bbee1c.png)
 
+Thoughts –
+Adapter is actually the part the I spent a lot of time thinking, I kept asking myself questions such as “What type of adapters are being used in this project?”, “Do I even need to trim adapters?”, “If so what would the data look like? Better or worse?” I think knowing the type of adapter being used for the project is important because it’s important to input the right adapter into adapter.fa otherwise it will mess up trimming later. I went to the NCBI page that has all information about this project. I found out that the instrument used is illumina HiSeq 2500, then I went to illumina’s website trying to figure out the type of adapter being used here. I couldn’t. Finally, the way I solved this problem is by running fastqc on these runs and I scrolled down to the bottom of the report where it shows % adapters. I saw one red line in each which indicates the type of adapter being used here is illumina universal adapter. 
+Is trimming adapters necessary? To answer this question of mine, I did some investigation. I read an article from https://www.ecseq.com/support/ngs/trimming-adapter-sequences-is-it-necessary , It says if it’s small RNA sequencing, then adapter trimming is highly necessary whereas if it’s transcriptome sequencing, whole genome sequencing, etc., then trimming is not necessary because adapter contamination can be expected to be so small (due to an appropriate size selection) In this project, I think our source is transcriptomic (found on NCBI project page), but just curious, I want to see how trimming is going to affect the data, I did it. 
+Conclusions – 
+After comparing the report before and after trimming, I’d say trimming isn’t necessary going to make the data/report “better” or “worse”, it depends on what our goal is or what we are looking for. Now looking at the report, since there’s only four runs that received warning, what I can do next is to trim only these four and compare again. Also, determining the adapter type and whether they need to be trimmed or not is also crucial. 
+
+
+MultiQC results - (before trimming adapters)   
 
 
 
