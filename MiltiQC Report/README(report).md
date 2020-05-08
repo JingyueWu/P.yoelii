@@ -71,6 +71,14 @@ About the same, all 12 runs fail because the sum of the deviations from the norm
 
 
 MultiQC results - (before trimming adapters)
+![image](https://user-images.githubusercontent.com/61590108/81425649-0496d500-9126-11ea-96e8-5f4d60ac9c38.png)
+
+MultiQC results – (after trimming adapters)   
+
+
+Conclusions- 
+About the same, all 12 are flagged as warning because the position shows N content is above 5%.
+I think the reason causes this is still the biased sequence. Will further investigate. 
 
 
 
