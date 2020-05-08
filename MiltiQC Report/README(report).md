@@ -85,13 +85,13 @@ MultiQC results - (before trimming adapters)
 ![image](https://user-images.githubusercontent.com/61590108/81425817-47f14380-9126-11ea-9bbe-a20e38483291.png)
 
 MultiQC results – (after trimming adapters)   
-
+![image](https://user-images.githubusercontent.com/61590108/81425906-69522f80-9126-11ea-9a37-8887d3374d18.png)
 
 Conclusion – 
 After trimming adapters, it seems “worse”, but I think since this graph just shows us the sequence length distribution and I trimmed the adapters, then it’s normal to see that now all sequences are not the same length. This can actually be seen in the first graph (all the way on top), the green shaded column where we can see before trimming they all have the same length but after trimming, some got shorter therefore they differ in length. 
 
 
-
+MultiQC results - (before trimming adapters)    
 
 
 
