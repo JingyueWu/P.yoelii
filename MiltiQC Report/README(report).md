@@ -74,11 +74,14 @@ MultiQC results - (before trimming adapters)
 ![image](https://user-images.githubusercontent.com/61590108/81425649-0496d500-9126-11ea-96e8-5f4d60ac9c38.png)
 
 MultiQC results – (after trimming adapters)   
-
+![image](https://user-images.githubusercontent.com/61590108/81425741-2abc7500-9126-11ea-8a0e-5f883c98f639.png)
 
 Conclusions- 
 About the same, all 12 are flagged as warning because the position shows N content is above 5%.
 I think the reason causes this is still the biased sequence. Will further investigate. 
+
+
+MultiQC results - (before trimming adapters)    
 
 
 
