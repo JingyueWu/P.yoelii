@@ -16,7 +16,11 @@ MultiQC results – (after trimming adapters)
 Conclusion: 
 After trimming adapters, the numbers of higher failure rate increased.
 
+
 MultiQC results - (before trimming adapters)    
+![image](https://user-images.githubusercontent.com/61590108/81424627-3f980900-9124-11ea-94c1-684b2496b4cc.png)
+
+MultiQC results – (after trimming adapters)    
 
 
 
