@@ -64,6 +64,14 @@ MultiQC results - (before trimming adapters)
 ![image](https://user-images.githubusercontent.com/61590108/81425482-af5ac380-9125-11ea-9044-432f3fd4a2f5.png)
 
 MultiQC results – (after trimming adapters)   
+![image](https://user-images.githubusercontent.com/61590108/81425551-cb5e6500-9125-11ea-8c33-a1be52b65be8.png)
+
+Conclusion – 
+About the same, all 12 runs fail because the sum of the deviations from the normal distribution represents more than 30% of the reads. I think there might be contamination in the library that cause this. Will further investigate.
+
+
+MultiQC results - (before trimming adapters)
+
 
 
 
