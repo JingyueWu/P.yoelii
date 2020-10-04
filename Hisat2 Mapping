@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#bash script for hisat2, index, and convert all files to .sam files simultaneously
+
+set -uex
+
+SAMPLES="SRR7059090 SRR7059091 SRR7059092 SRR7059093 SRR7059094 SRR7059095 SRR7059096 SRR7059097"
+
+for SAMPLE in $SAMPLES; do
+	hisat2 -p 8 --dta -x ~/home/jingyue/work2020/hisat2 -1 ~/home/jingyue/work2020/flciparum/${SAMPLE}_1.fastq -S ${SAMPLE}.sam
+done
+
+#convert .sam files to .bam files
+
+SAMPLES="SRR7059090 SRR7059091 SRR7059092 SRR7059093 SRR7059094 SRR7059095 SRR7059096 SRR7059097"
+
+for SAMPLE in $SAMPLES; do
+	samtools sort -@ 8 -o ${SAMPLE}.bam ${SAMPLE}.sam
+done
+
+#index all .bam files to obtain .bam.bai files using samtools
+
+SAMPLES="SRR7059090 SRR7059091 SRR7059092 SRR7059093 SRR7059094 SRR7059095 SRR7059096 SRR7059097"
+for SAMPLE in $SAMPLES; do
+	samtools index ${SAMPLE}.bam ${SAMPLE}.bam.bai
+done
